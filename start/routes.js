@@ -38,6 +38,8 @@ Route.post('/properties', 'PropertyController.store')
 Route.get('/properties/edit/:id', 'PropertyController.edit')
 Route.put('/properties/:id', 'PropertyController.update')
 Route.delete('/properties/:id', 'PropertyController.destroy')
+// Route.get('/properties', 'PropertyController.showPropertyHome')
+// Route.get('/properties/user-home', 'PropertyController.showUserHome')
 
 Route.get('/home', 'HomeController.showHomepage')
 Route.get('register', 'Auth/RegisterController.showRegisterForm').middleware(['authenticated'])
