@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
+/* 
 html, body {
   height: 100%;
   width: 100%;
@@ -89,4 +89,9 @@ p {
     opacity: 1;
     transform: none;
   }
+} */
+
+
+.logo {
+  background: url("/image-1.png") no-repeat; 
 }
