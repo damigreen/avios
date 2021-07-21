@@ -6,12 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS only -->
   {{ style('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css') }}
-  <title>Greenmsoft Customer Management</title>
+  <title>Avios Customer Management</title>
 </head>
 <body>
   @include('inc/navbar')
   <div class="container">
-    @!section('content')
+    <div>
+      <div>
+        @!section('property_home')
+        @!section('tenants_home')
+      </div>
+      <div>
+        @!section('user_home')
+      </div>
+    </div>
+    <div>
+      @!section('content')
+      @!section('user_home')
+    </div>
+
   </div>
   
   {{ script('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js') }}
