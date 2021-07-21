@@ -45,7 +45,7 @@ class PasswordRestController {
       await mail.send('auth.emails.password_reset', mailData, message => {
         message
           .to(user.email)
-          .from('hello@greenmsoft.com')
+          .from('hello@avios.com')
           .subject('Password reset link')
         })
         

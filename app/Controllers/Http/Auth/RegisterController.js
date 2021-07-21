@@ -38,7 +38,7 @@ class RegisterController {
     // Send confirmation email
     await mail.send('auth.emails.confirm_email', user.toJSON(), message => {
       message.to(user.email)
-      .from('hello@greenmsoft.com')
+      .from('hello@avios.com')
       .subject('Please confirm your email address')
     })
 
