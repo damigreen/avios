@@ -1,26 +1,23 @@
-# Adonis fullstack application
+# Avios Property Management
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+This applications is a property management software for avios ic.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+## Features
+
+1. Property managemnt
+2. Rent management
+3. User Administration
+4. Request handling
 
 ## Setup
 
 Use the adonis command to install the blueprint
 
 ```bash
-adonis new yardstick
+git clone https://github.com/damigreen/avios.git 
+cd avios
+npm install && nodemon server.js
 ```
-
-or manually clone the repo and then run `npm install`.
-
 
 ### Migrations
 
