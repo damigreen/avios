@@ -6,7 +6,7 @@ const { validate } = use('Validator');
 
 class PropertyController {
 
-  async index({ view }) {
+  async index({ view, params }) {
     const propertiesHeader = [
       { type: 'propertyName', value: 'Property Name' },
       { type: 'value', value: 'Value' },
@@ -16,6 +16,7 @@ class PropertyController {
 
     const properties = await Property.all()
 
+    // console.log(params)
     return view.render('properties.index', {
       propertiesHeader: propertiesHeader,
       properties: properties.toJSON(),
@@ -93,6 +94,15 @@ class PropertyController {
 
     return response.redirect('/properties')
   }
+
+  async display ({ view, params }) {
+    const property = await Property.find(params.id)
+    console.log(property)
+    return view.render('properties.display', {
+      property: property.toJSON(),
+    })
+  }
+
 }
 
 module.exports = PropertyController
