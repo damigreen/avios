@@ -15,13 +15,14 @@
           @endeach
       </tr>
     </thead>
+    
     <tbody>
       @each(prop in properties)
         <tr class="table-data">
-          <td><a href='/properties/{{prop.id}}'> {{ prop.propertyName }}</a></td>
+          <td><a href='/properties/{{ prop.id }}'> {{ prop.propertyName }}</a></td>
           <td>{{ prop.value }}</td>
           <td>{{ prop.tenants }}</td>
-          <td>₦{{ prop.rent }}</td>
+          <td>₦{{ prop.rent }} <a href='/properties/{{ prop.id }}' style="float: right" class="btn btn-dark">View property</a></td>
         </tr>
       @endeach
     </tbody>
