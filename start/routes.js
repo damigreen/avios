@@ -55,4 +55,6 @@ Route.get('/password/reset/:token', 'Auth/PasswordResetController.showResetForm'
 Route.post('/password/reset', 'Auth/PasswordResetController.reset')
 
 // Routes for Adonis-Vue-Todo App
-Route.post('auth/vue-todo/register', 'Vue-Todo/UserController.register')
+Route.group('auth/register', () => {
+  Route.post('auth/register', 'Vue-Todo/UserController.register')
+}).prefix('vue-todo')
