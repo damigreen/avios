@@ -53,3 +53,9 @@ Route.get('/password/reset', 'Auth/PasswordResetController.showLinkRequetForm')
 Route.post('password/email', 'Auth/PasswordResetController.sendResetLinkEmail')
 Route.get('/password/reset/:token', 'Auth/PasswordResetController.showResetForm')
 Route.post('/password/reset', 'Auth/PasswordResetController.reset')
+
+Route.post('auth/vue-todo/register', () => {
+  return {
+    message: "hello world"
+  }
+})
