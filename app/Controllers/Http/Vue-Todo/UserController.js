@@ -1,9 +1,16 @@
 'use strict'
 
+const TodoUser = use('App/Models/Vue-Todo/VueTodoUser')
+
 class UserController {
-  register() {
-    return {
-      message: 'Hello world!'
+  async register({ request }) {
+    try {
+      const { email, password, name } = request.all()
+      const user = await TodoUser.create({ name: name, email: email, password: password, username: email })
+      return user
+      
+    } catch (e) {
+      console.error(e)
     }
   }
 }
