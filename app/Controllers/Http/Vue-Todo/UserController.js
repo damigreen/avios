@@ -11,6 +11,18 @@ class UserController {
       
     } catch (e) {
       console.error(e)
+    } 
+  }
+
+  async login ({ request, auth }) {
+    try {
+      const { email, password } = request.all()
+      const token = await auth.attempt(email, password)
+      console.log(token)
+      return token;
+
+    } catch (e) {
+      console.log(e)
     }
   }
 }
